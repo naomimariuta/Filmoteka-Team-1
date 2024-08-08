@@ -1,0 +1,98 @@
+$border-radius: 20px;
+$primary-color: #b92f2c;
+$font-family: 'Roboto', sans-serif;
+$box-shadow: 0 4px 8px 0 rgba($primary-color, 0.2), 0 6px 20px 0 rgba($primary-color, 0.19);
+$transition: transform 0.3s ease;
+
+//Am folosit variabile SCSS pentru culori,fonturi, umbre și tranziții pentru a face codul mai ușor de întreținut și de modificat.
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Am scris stilurile pentru card
+.movie-card {
+    border-radius: $border-radius;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+
+    // Am scris stilurile pentru titlu
+    .movie-title {
+        color: #000;
+        font-family: $font-family;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 10px 0 0 0;
+        text-transform: uppercase;
+    }
+
+    // Am scris stilurile pentru descriere
+    .movie-info {
+        color: $primary-color;
+        font-family: $font-family;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.3em;
+        margin: 0;
+    }
+
+    //Am imbricat selecțiile CSS pentru a reflecta mai clar structura HTML și pentru a reduce repetarea selecțiilor.
+
+    .vote {
+        padding: 0 5px;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+    }
+
+    // Am scris stilurile pentru imaginea din card
+    .movie-image {
+        border-radius: $border-radius;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            transform: scale(1.03);
+        }
+    }
+}
+
+//Am păstrat operatorii de calcule CSS pentru a ajusta dimensiunile cardurilor în funcție de dimensiunea ecranului.
+
+@media screen and (min-width: 424px) {
+    .movie-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .movie-card {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .movie-card {
+        width: calc(33% - 14px);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .movie-container {
+        margin: 20px auto;
+        width: 1216px;
+    }
+
+    .movie-card {
+        width: calc(25% - 15px);
+    }
+}
