@@ -1,0 +1,100 @@
+a {
+    text-decoration: none;
+}
+
+.watch-and-queue {
+    display: none;
+}
+
+.hero-section {
+    background-image: url("/src/images/background-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    max-width: 1220px;
+    width: 100%;
+    height: 316px;
+    padding: 14px;
+    background-color: rgba(197, 5, 5, 0.8);
+    overflow: hidden;
+    border-radius: 10px;
+    animation: backgroundTransition 3s infinite normal;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.home-library {
+    list-style-type: none;
+    gap: 8px;
+    display: flex;
+}
+
+.home-btn {
+    color: black;
+    border-radius: 100px;
+    border: 1px solid white;
+    padding: 14px 24px;
+    background-color: white;
+    font-weight: 500;
+}
+
+.library-btn {
+    color: black;
+    border-radius: 100px;
+    border: 1px solid white;
+    padding: 14px 24px;
+    background-color: white;
+    font-weight: 500;
+}
+
+.logo-title{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.film-logo{
+    width: 59px;
+    height: 59px;
+    margin-right: 16px;
+}
+
+.title{
+    color: white;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 75px;
+    position: absolute;
+    bottom: 1%;
+}
+
+.nav-list{
+    display: flex; 
+}
+
+.search-form{
+    border: 1px solid white;
+    border-radius: 100px;
+    background-color: white;
+    outline: none;
+    display: flex;
+    padding: 10px;
+    margin-left: 32px;
+    margin-right: -20px;
+}
+
+.search-form input{
+    border: none;
+    font-weight: 500;
+    color: black;
+    outline: none;
+}
+
+.search-form button {
+    border: none;
+    background: transparent;
+}
