@@ -9,21 +9,19 @@ a {
 .hero-section {
     background-image: url("/src/images/background-header-desktop.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center center;
-    max-width: 1220px;
+
     width: 100%;
+    max-width: 1220px;
     height: 316px;
-    padding: 14px;
     background-color: rgba(197, 5, 5, 0.8);
     overflow: hidden;
-    border-radius: 10px;
-    animation: backgroundTransition 3s infinite normal;
+    border-radius: 15px;
     position: absolute;
-    top: 20%;
+    top: 1%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translate(-50%);
 }
 
 
@@ -31,45 +29,50 @@ a {
     list-style-type: none;
     gap: 8px;
     display: flex;
+    margin-top: 25px;
 }
 
 .home-btn {
-    color: black;
+    color: var(--text-color-light);
     border-radius: 100px;
     border: 1px solid white;
     padding: 14px 24px;
-    background-color: white;
-    font-weight: 500;
+    background-color: var(--light-theme-color);
+    font-weight: var(--default-weight);
+    font-size: var(--button-size);
+    margin-left: -5px;
 }
 
 .library-btn {
-    color: black;
+    color: var(--text-color-light);
     border-radius: 100px;
     border: 1px solid white;
     padding: 14px 24px;
-    background-color: white;
-    font-weight: 500;
+    background-color: var(--light-theme-color);
+    font-weight: var(--default-weight);
+    font-size: var(--button-size);
 }
 
 .logo-title{
     position: absolute;
     bottom: 5%;
-    left: 5%;
+    left: 3%;
 }
 
 .film-logo{
     width: 59px;
     height: 59px;
     margin-right: 16px;
+    margin-bottom: 15px;
 }
 
 .title{
-    color: white;
-    font-weight: 500;
+    color: var(--light-theme-color);
+    font-weight: var(--default-weight);
     font-size: 64px;
     line-height: 75px;
     position: absolute;
-    bottom: 1%;
+    bottom: 15px;
 }
 
 .nav-list{
@@ -79,22 +82,27 @@ a {
 .search-form{
     border: 1px solid white;
     border-radius: 100px;
-    background-color: white;
+    background-color: var(--light-theme-color);
     outline: none;
     display: flex;
     padding: 10px;
     margin-left: 32px;
     margin-right: -20px;
+    margin-top: 10px;
 }
 
 .search-form input{
     border: none;
-    font-weight: 500;
-    color: black;
+    color: var(--text-color-light);
     outline: none;
+    font-size: var(--search-size);
 }
 
 .search-form button {
     border: none;
     background: transparent;
+}
+
+.search-form button:hover{
+    cursor: pointer;
 }

@@ -1,0 +1,15 @@
+:root {
+  --default-font: 'Roboto', sans-serif;
+  --default-weight: 500;
+  --light-theme-color: #ffffff;
+  --dark-theme-color: #000000;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+  --button-size: 12px;
+  --search-size: 14px;
+  --movie-name-size: 20px;
+  --movie-genre-size: 20px;
+  --movie-genre-color: #b92f2c;
+  --footer-text: #545454;
+  --current-page-color: #b92f2c;
+}
