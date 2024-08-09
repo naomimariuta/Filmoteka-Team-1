@@ -1,0 +1,121 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Container for pagination */
+.pagination-container {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the pagination */
+}
+
+/* Pagination styling */
+.pagination {
+  display: inline-block;
+  padding: 16px;
+}
+
+/* Pagination links (page numbers) */
+.page-button {
+  color: #000000;
+  background-color: #f7f7f7; /* Background color */
+  border: 1px solid #b92f2c; /* Border color */
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s; /* Transition for background color and text color */
+}
+
+.page-button:hover {
+  background-color: #b92f2c;
+  color: #fff; /* Text color on hover */
+}
+
+.page-button.active {
+  background-color: #b92f2c;
+  color: #fff; /* Text color for active button */
+}
+
+/* Arrow styling */
+.arrow {
+  display: inline-block;
+  padding: 10px 20px; /* Increase padding to make arrows bigger */
+  margin: 0 10px;
+  cursor: pointer;
+  color: #000000;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  font-size: 20px; /* Larger font size for arrows */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #fff; /* Text color on hover */
+  background-color: #b92f2c;
+}
+
+/* Content area styling */
+.content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  flex: 1;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1280px) {
+  .content {
+    max-width: 90%;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .page-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 3px;
+  }
+
+  .arrow {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+}
+
+/* Additional styling for very small screens (320px) */
+@media (max-width: 320px) {
+  .content {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .page-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  .arrow {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+}
