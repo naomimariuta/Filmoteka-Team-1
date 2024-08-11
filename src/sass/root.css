@@ -11,7 +11,10 @@
   --movie-genre-size: 20px;
   --movie-genre-color: #b92f2c;
   --footer-text: #545454;
+  --footer-background-color: #f7f7f7;
+  --footer-text-size: 16px;
   --current-page-color: #b92f2c;
+  --heart-color: #b92f2c
 }
 
 body {

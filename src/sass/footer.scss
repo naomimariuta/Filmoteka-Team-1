@@ -2,11 +2,11 @@
   width: 100%;
   padding: 20px;
   margin-top: auto;
-  background-color: #f7f7f7;
-  color: var(--text-color-light);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text);
   text-align: center;
   font-family: var(--default-font);
-  font-size: 16px;
+  font-size: var(--footer-font-size);
   margin: 0 auto;
 }
 
@@ -15,6 +15,6 @@
 }
 
 .fa-solid {
-color: #B92F2C;
+color: var(--heart-color);
 padding: 0px 10px;
 }

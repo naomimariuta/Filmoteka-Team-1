@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const contentDiv = document.getElementById('content');
   const paginationDiv = document.getElementById('pagination');
 
-  const itemsPerPage = 1; // Number of items per page
-  const totalItems = 300; // Total number of items
-  const totalPages = Math.ceil(totalItems / itemsPerPage); // Total number of pages
+  const itemsPerPage = 1; 
+  const totalItems = 300; 
+  const totalPages = Math.ceil(totalItems / itemsPerPage); 
   let currentPage = 1;
 
   function generateContent(page) {
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function generatePagination() {
     paginationDiv.innerHTML = '';
 
-    // Add "first page" double arrow
     const firstArrow = document.createElement('span');
     firstArrow.className = 'arrow';
     firstArrow.textContent = '«';
@@ -49,12 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     paginationDiv.appendChild(prevArrow);
 
-    // Calculate the page range to show
     const maxButtons = 4; // Number of page buttons to display initially
     let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
     let endPage = Math.min(totalPages, startPage + maxButtons - 1);
 
-    // Adjust startPage if the endPage goes beyond totalPages
     if (endPage - startPage + 1 < maxButtons) {
       startPage = Math.max(1, endPage - maxButtons + 1);
     }
@@ -108,5 +105,5 @@ document.addEventListener('DOMContentLoaded', function () {
     generatePagination();
   }
 
-  updatePagination(); // Initial call to setup content and pagination
+  updatePagination(); 
 });
