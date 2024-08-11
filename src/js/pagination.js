@@ -9,22 +9,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function generateContent(page) {
     contentDiv.innerHTML = '';
-    if (page > 1) {
-      contentDiv.style.display = 'block'; // Show content if not on the first page
-      // Calculate the start and end index for the current page
-      const startIndex = (page - 1) * itemsPerPage + 1;
-      const endIndex = Math.min(page * itemsPerPage, totalItems);
+    const startIndex = (page - 1) * itemsPerPage + 1;
+    const endIndex = Math.min(page * itemsPerPage, totalItems);
 
-      for (let i = startIndex; i <= endIndex; i++) {
-        contentDiv.innerHTML += `<p>Item ${i}: This is some content for item ${i}.</p>`;
-      }
-    } else {
-      contentDiv.style.display = 'none'; // Hide content on the first page
+    for (let i = startIndex; i <= endIndex; i++) {
+      contentDiv.innerHTML += `<p>Item ${i}: This is some content for item ${i}.</p>`;
     }
   }
 
   function generatePagination() {
     paginationDiv.innerHTML = '';
+
+    // Add "first page" double arrow
+    const firstArrow = document.createElement('span');
+    firstArrow.className = 'arrow';
+    firstArrow.textContent = '«';
+    firstArrow.addEventListener('click', function () {
+      if (currentPage > 1) {
+        currentPage = 1;
+        updatePagination();
+      }
+    });
+    if (currentPage === 1) {
+      firstArrow.classList.add('disabled');
+    }
+    paginationDiv.appendChild(firstArrow);
 
     const prevArrow = document.createElement('span');
     prevArrow.className = 'arrow';
@@ -77,6 +86,21 @@ document.addEventListener('DOMContentLoaded', function () {
       nextArrow.classList.add('disabled');
     }
     paginationDiv.appendChild(nextArrow);
+
+    // Add "last page" double arrow
+    const lastArrow = document.createElement('span');
+    lastArrow.className = 'arrow';
+    lastArrow.textContent = '»';
+    lastArrow.addEventListener('click', function () {
+      if (currentPage < totalPages) {
+        currentPage = totalPages;
+        updatePagination();
+      }
+    });
+    if (currentPage === totalPages) {
+      lastArrow.classList.add('disabled');
+    }
+    paginationDiv.appendChild(lastArrow);
   }
 
   function updatePagination() {
