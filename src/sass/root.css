@@ -13,3 +13,14 @@
   --footer-text: #545454;
   --current-page-color: #b92f2c;
 }
+
+body {
+  font-family: var(--default-font);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
