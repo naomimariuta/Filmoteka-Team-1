@@ -38,6 +38,7 @@ export async function getMoviesByGenres() {
       params: { api_key: API_KEY, language: 'en' },
     });
     return response.data;
+    
   } catch (error) {
     onError(error.message);
   }

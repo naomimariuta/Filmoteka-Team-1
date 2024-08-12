@@ -1,5 +1,5 @@
 import { getFromStorage } from './storageManager';
-import { getMoviesByGenres, getPopularFilms, onError } from './movieApi';
+import { getMoviesByGenres, getPopularFilms, onError, } from './movieApi';
 
 export const genreList = {};
 
@@ -38,7 +38,6 @@ export function createGallery(results = []) {
       } else {
         poster = `https://image.tmdb.org/t/p/w500${poster_path}`;
       }
-
       return `
     <li class="card-list-item">
           <a href="#" class="card-list-link" id="${id}">
@@ -81,3 +80,4 @@ export function updateMovieStateInStorage(id, isInQueue, isWatched) {
     localStorage.setItem(id.toString(), JSON.stringify(movie));
   }
 }
+
