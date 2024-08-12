@@ -13,8 +13,8 @@ const runningAPI = async () => {
   } catch (error) {
     onError(error);
   }
-  runningAPI();
 };
+runningAPI();
 
 export function createGallery(results = []) {
   const elements = results
@@ -29,13 +29,7 @@ export function createGallery(results = []) {
         vote_average,
       } = m;
 
-      const genreGalerry = genres
-        .slice(0, 2)
-        .map(el => (genreList[el.id] = el.name));
-      const mainGenre = genre_ids.slice(0, 2).map(el => {
-        ' ' + genreList[el];
-        console.log(el);
-      });
+      const mainGenre = genre_ids.map(el => ' ' + genreList[el]);
       const year = new Date(release_date).getFullYear();
       const average = vote_average.toFixed(2);
       let poster;
@@ -52,7 +46,7 @@ export function createGallery(results = []) {
               <img class="card-list-img" data-id="${id}" src="${poster}" alt=" ${title} ">
             </div>
             <h3 class="card-list-title">${title}</h3>
-            <p class="card-list-text">${genreGalerry} | ${year || ''} </p>
+            <p class="card-list-text">${mainGenre} | ${year || ''} </p>
           </a>
         </li>`;
     })

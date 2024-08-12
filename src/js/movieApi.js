@@ -15,7 +15,6 @@ export async function getPopularFilms(page) {
   const response = await axios.get(`${BASE_URL}3/trending/movie/day`, {
     params: { api_key: API_KEY, page: page || 1 },
   });
-  console.log(response.data);
   return response.data;
 }
 
