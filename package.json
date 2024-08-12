@@ -21,12 +21,10 @@
     "audit": "^0.0.6",
     "axios": "^1.7.3",
     "fix": "^0.0.3",
-    "lightbox": "^0.5.0",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.7",
     "npm": "^10.8.2",
-    "simplelightbox": "^2.14.3",
-    "tui-pagination": "^3.4.1"
+    "simplelightbox": "^2.14.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
