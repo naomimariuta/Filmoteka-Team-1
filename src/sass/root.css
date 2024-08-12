@@ -15,6 +15,8 @@
   --footer-text-size: 16px;
   --current-page-color: #b92f2c;
   --heart-color: #b92f2c
+  --hover: 200ms;
+  --function-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -26,4 +28,14 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
