@@ -31,22 +31,104 @@ a {
 .home-btn {
   color: var(--text-color-light);
   border-radius: 100px;
-  border: 1px solid white;
+  border: transparent;
   padding: 14px 24px;
   background-color: var(--light-theme-color);
   font-weight: var(--default-weight);
   font-size: var(--button-size);
   margin-left: -5px;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* ANIMATIE HOME  */
+
+.home-btn span {
+  display: inline-block;
+  opacity: 1; 
+  transform: translateY(0px); 
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.home-btn:hover{
+  background-color: var(--movie-genre-color) 0.5s ease;
+  color: var(--light-theme-color);
+  border: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.home-btn:hover span {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.home-btn:hover .home-h {
+  opacity: 1;
+  transform: translateY(-10px);
+  transition-delay: 0.1s;
+}
+
+.home-btn:hover .home-o{
+  opacity: 1;
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
+}
+
+.home-btn:hover .home-m {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.3s;
+}
+
+.home-btn:hover .home-e {
+  opacity: 1;
+  transform: translateY(5px);
+  transition-delay: 0.4s;
+}
+
+/* ANIMATIE MY LIBRARY */
+
+.library-btn span {
+  display: inline-block;
+  opacity: 1; 
+  transform: translateY(0px); 
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.library-btn:hover{
+  background-color: var(--movie-genre-color) 0.5s ease;
+  color: var(--light-theme-color);
+  border: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.library-btn:hover span {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.library-btn:hover .my-btn {
+  opacity: 1;
+  transform: translateY(-10px);
+  transition-delay: 0.1s;
+}
+
+.library-btn:hover .lbr-btn{
+  opacity: 1;
+  transform: translateY(5px);
+  transition-delay: 0.2s;
 }
 
 .library-btn {
   color: var(--text-color-light);
   border-radius: 100px;
-  border: 1px solid white;
+  border: transparent;
   padding: 14px 24px;
   background-color: var(--light-theme-color);
   font-weight: var(--default-weight);
   font-size: var(--button-size);
+  transition: background-color 0.5s ease-in-out;
+
 }
 
 .logo-title {
@@ -60,7 +142,28 @@ a {
   height: 59px;
   margin-right: 16px;
   margin-bottom: 15px;
+  fill: white;
+
+  animation: rotate-animation 10s linear infinite;
+  transform-origin: center;
+
 }
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.second-logo {
+  display: none;
+}
+
+
 
 .title {
   color: var(--light-theme-color);
@@ -102,3 +205,35 @@ a {
 .search-form button:hover {
   cursor: pointer;
 }
+
+.dark-btn{
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  border: transparent;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: var(--light-theme-color);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.fa-moon{
+  /* color: var(--light-theme-color); */
+  opacity: 0;
+  transform: translateY(10px); /* Luna este inițial ascunsă */
+}
+
+.dark-btn i {
+  font-size: 20px; 
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#sun {
+  color: #f3cf00; 
+  opacity: 1;
+  transform: translateY(10px);
+}
+

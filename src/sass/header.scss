@@ -1,9 +1,10 @@
 .logo-effect {
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
-  background: url('/src/images/logo-effect.png') repeat-y;
+  background: url('/src/images/Marvel-Logo-PNG-Cutout-2.png') repeat-y;
+  background-color: rgba(255, 255, 255, 0.9);
   background-clip: text;
   color: transparent;
-  animation: logo-effect-animation 75s linear infinite;
+  animation: logo-effect-animation 35s linear infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 
@@ -17,3 +18,4 @@
     }
   }
 }
+

@@ -18,10 +18,17 @@
       <div class="">
         <ul class="home-library">
           <li>
-            <a href="./index.html" class="home-btn"> <b>HOME</b> </a>
+            <a href="./index.html" class="home-btn"> 
+              <b><span class="home-h">H</span></b>
+              <b><span class="home-o">O</span></b>
+              <b><span class="home-m">M</span></b>
+              <b><span class="home-e">E</span></b>
+            </a>
           </li>
           <li>
-            <a href="./index.html" class="library-btn"> <b>MY LIBRARY</b> </a>
+            <a href="./index.html" class="library-btn">
+               <span class="my-btn"><b>MY</b> </span>
+              <span class="lbr-btn"><b>LIBRARY</b></span></a>
           </li>
         </ul>
       </div>
@@ -37,12 +44,18 @@
       </div>
       <div class="logo-title">
         <a href="./index.html">
-          <svg class="film-logo">
-            <use href="/src/images/symbol-defs.svg#icon-film"></use>
+          <svg class="film-logo rotate-animation">
+            <use id="logo" href="/src/images/symbol-defs.svg#icon-film"></use>
+            <use id="logo2" class="second-logo" href="/src/images/symbol-defs.svg#icon-camera"></use>
           </svg>
         </a>
         <a href="./index.html" class="title logo-effect">Filmoteka</a>
       </div>
+      
+      <button class="dark-btn" id="theme-toggle">
+        <i class="fa-solid fa-sun" id="sun"></i>
+        <i class="fa-solid fa-moon" id="moon"></i>
+      </button>
     </nav>
   </div>
 </header>
