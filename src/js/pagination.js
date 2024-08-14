@@ -1,25 +1,37 @@
+import { getPopularFilms, onError} from "./movieApi";
+import { createGallery } from "./libraryManager";
+
 document.addEventListener('DOMContentLoaded', function () {
   const contentDiv = document.getElementById('content');
   const paginationDiv = document.getElementById('pagination');
 
-  const itemsPerPage = 1; 
-  const totalItems = 300; 
-  const totalPages = Math.ceil(totalItems / itemsPerPage); 
+  const itemsPerPage = 20;  // Numărul de elemente per pagină
   let currentPage = 1;
+  let totalPages = 1;
 
-  function generateContent(page) {
-    contentDiv.innerHTML = '';
-    const startIndex = (page - 1) * itemsPerPage + 1;
-    const endIndex = Math.min(page * itemsPerPage, totalItems);
+  async function generateContent(page) {
+    try {
+      const data = await getPopularFilms(page);
+      totalPages = Math.ceil(data.total_results / itemsPerPage);
 
-    for (let i = startIndex; i <= endIndex; i++) {
-      contentDiv.innerHTML += `<p>Item ${i}: This is some content for item ${i}.</p>`;
+      console.log("Total pages:", totalPages); 
+
+      if (data.results.length > 0) {
+        createGallery(data.results);
+      } else {
+        contentDiv.innerHTML = '<p>No movies available.</p>';
+      }
+      
+      generatePagination(); // Generează butoanele de paginare după actualizarea `totalPages`
+    } catch (error) {
+      onError(error);
     }
   }
 
   function generatePagination() {
-    paginationDiv.innerHTML = '';
+    paginationDiv.innerHTML = ''; 
 
+    // Buton pentru prima pagină
     const firstArrow = document.createElement('span');
     firstArrow.className = 'arrow';
     firstArrow.textContent = '«';
@@ -34,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     paginationDiv.appendChild(firstArrow);
 
+    // Buton pentru pagina anterioară
     const prevArrow = document.createElement('span');
     prevArrow.className = 'arrow';
     prevArrow.textContent = '←';
@@ -48,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     paginationDiv.appendChild(prevArrow);
 
-    const maxButtons = 4; // Number of page buttons to display initially
+    const maxButtons = 5;
     let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
     let endPage = Math.min(totalPages, startPage + maxButtons - 1);
 
@@ -56,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       startPage = Math.max(1, endPage - maxButtons + 1);
     }
 
+    // Generează butoanele pentru pagini
     for (let i = startPage; i <= endPage; i++) {
       const button = document.createElement('span');
       button.className = 'page-button';
@@ -70,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       paginationDiv.appendChild(button);
     }
 
+    // Buton pentru pagina următoare
     const nextArrow = document.createElement('span');
     nextArrow.className = 'arrow';
     nextArrow.textContent = '→';
@@ -84,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     paginationDiv.appendChild(nextArrow);
 
-    // Add "last page" double arrow
+    // Buton pentru ultima pagină
     const lastArrow = document.createElement('span');
     lastArrow.className = 'arrow';
     lastArrow.textContent = '»';
@@ -98,11 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
       lastArrow.classList.add('disabled');
     }
     paginationDiv.appendChild(lastArrow);
+    console.log(paginationDiv.innerHTML)
   }
 
   function updatePagination() {
     generateContent(currentPage);
-    generatePagination();
   }
 
   updatePagination(); 

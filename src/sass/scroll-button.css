@@ -3,8 +3,8 @@
 
 .scrollbutton {
   position: fixed;
-  bottom: 30px;
-  right: 2%;
+  bottom: 14%;
+  right: 5%;
   background-color: color: var(--light-theme-color);
   padding: 10px;
   border-radius: 50px;
