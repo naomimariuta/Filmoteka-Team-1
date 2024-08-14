@@ -19,7 +19,7 @@ export async function getPopularFilms(page) {
 }
 
 export async function getMovieInfo(id) {
-  const response = await axios.get(`${BASE_URL}3/movies/movie${id}`, {
+  const response = await axios.get(`${BASE_URL}3/movie/${id}`, {
     params: { api_key: API_KEY },
   });
   return response.data;
@@ -38,7 +38,6 @@ export async function getMoviesByGenres() {
       params: { api_key: API_KEY, language: 'en' },
     });
     return response.data;
-    
   } catch (error) {
     onError(error.message);
   }
