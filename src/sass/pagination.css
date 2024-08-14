@@ -1,82 +1,69 @@
 /* General body styling */
-
+@import url(root.css);
 
 /* Container for pagination */
 .pagination-container {
   text-align: center;
-  margin-bottom: 20px;
-  /* Space below the pagination */
-  position: absolute;
-  bottom: 6%;
+  position: relative;
+  margin-top: 60px; /* Space between gallery and pagination */
+  margin-bottom: 60px; /* Space between pagination and footer */
+  display: inline-block;
 }
 
 /* Pagination styling */
 .pagination {
   display: flex;
   align-items: center;
+  justify-content: center; /* Ensure pagination is centered */
   padding: 16px;
 }
 
 /* Pagination links (page numbers) */
 .page-button {
   color: #000000;
-  background-color: #f7f7f7;
-  /* Background color */
-  border: 1px solid #b92f2c;
-  /* Border color */
+  color: var(--dark-theme-color);
+  border: 1px solid var(--current-page-color); /* Border color */
   border-radius: 8px;
   padding: 10px 20px;
   margin: 5px;
   text-decoration: none;
   font-size: 16px;
   transition: background-color 0.3s, color 0.3s;
-  /* Transition for background color and text color */
 }
 
 .page-button:hover {
-  background-color: #b92f2c;
-  color: #fff;
-  /* Text color on hover */
+  background-color: var(--current-page-color);
+  color: var(--light-theme-color); /* Text color on hover */
 }
 
 .page-button.active {
-  background-color: #b92f2c;
-  color: #fff;
-  /* Text color for active button */
+  background-color: var(--current-page-color);
+  color: var(--light-theme-color); /* Text color for active button */
 }
 
 /* Arrow styling */
 .arrow {
   display: inline-block;
   padding: 10px 20px;
-  /* Increase padding to make arrows bigger */
   margin: 0 10px;
   cursor: pointer;
-  color: #000000;
-  background-color: #f7f7f7;
+  color: var(--dark-theme-color);
+  background-color: var(--light-theme-color);
   border-radius: 8px;
-  font-size: 20px;
-  /* Larger font size for arrows */
+  font-size: 20px; /* Larger font size for arrows */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .arrow:hover {
-  color: #fff;
-  /* Text color on hover */
-  background-color: #b92f2c;
+  color: var(--light-theme-color); /* Text color on hover */
+  background-color: var(--current-page-color);
 }
 
 /* Content area styling */
 .content {
-  /* padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1200px;
-  flex: 1; */
   display: none;
+  /* Use this if you need to show paginated content */
 }
 
 /* Responsive design for tablets */
