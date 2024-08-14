@@ -1,0 +1,18 @@
+/* style.css */
+@import url(root.css);
+
+.scrollbutton {
+  position: fixed;
+  bottom: 30px;
+  right: 2%;
+  background-color: color: var(--light-theme-color);
+  padding: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.scrollbutton:hover {
+  background-color: color: var(--light-theme-color);
+  font-size: 20px;
+  padding: 20px;
+}
