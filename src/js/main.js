@@ -1,5 +1,4 @@
 import { getPopularFilms } from './movieApi';
-import { createPagination } from './mainPagination';
 import { createGallery } from './libraryManager';
 
 function getMoviesPagination() {
