@@ -25,10 +25,13 @@ export async function getMovieInfo(id) {
   return response.data;
 }
 
-export async function getMovieByKeyword(keyword, page) {
-  const response = await axios.get(`${BASE_URL}3/search/search-movies`, {
-    params: { api_key: API_KEY, query: keyword, page: page },
-  });
+export async function getMovieByKeyword(keyword, page = 1) {
+  const response = await axios.get(
+    `${BASE_URL}3/search/movie?include_adult=false?language=en-US&page=1`,
+    {
+      params: { api_key: API_KEY, query: keyword, page: page },
+    }
+  );
   return response.data;
 }
 

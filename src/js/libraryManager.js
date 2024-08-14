@@ -59,6 +59,10 @@ export function createGallery(results = []) {
     .join('');
   const cardListEl = document.querySelector('.card-list-main');
   cardListEl.innerHTML = elements;
+
+  if (results.length === 0) {
+    cardListEl.innerHTML = '<p>No results found.</p>';
+  }
 }
 
 export function addToQueue(movieData) {
