@@ -19,16 +19,19 @@ export async function getPopularFilms(page) {
 }
 
 export async function getMovieInfo(id) {
-  const response = await axios.get(`${BASE_URL}3/movies/movie${id}`, {
+  const response = await axios.get(`${BASE_URL}3/movie/${id}`, {
     params: { api_key: API_KEY },
   });
   return response.data;
 }
 
-export async function getMovieByKeyword(keyword, page) {
-  const response = await axios.get(`${BASE_URL}3/search/search-movies`, {
-    params: { api_key: API_KEY, query: keyword, page: page },
-  });
+export async function getMovieByKeyword(keyword, page = 1) {
+  const response = await axios.get(
+    `${BASE_URL}3/search/movie?include_adult=false?language=en-US&page=1`,
+    {
+      params: { api_key: API_KEY, query: keyword, page: page },
+    }
+  );
   return response.data;
 }
 
@@ -38,7 +41,6 @@ export async function getMoviesByGenres() {
       params: { api_key: API_KEY, language: 'en' },
     });
     return response.data;
-    
   } catch (error) {
     onError(error.message);
   }

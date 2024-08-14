@@ -45,12 +45,12 @@ a {
 
 .home-btn span {
   display: inline-block;
-  opacity: 1; 
-  transform: translateY(0px); 
+  opacity: 1;
+  transform: translateY(0px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.home-btn:hover{
+.home-btn:hover {
   background-color: var(--movie-genre-color) 0.5s ease;
   color: var(--light-theme-color);
   border: transparent;
@@ -59,7 +59,7 @@ a {
 
 .home-btn:hover span {
   opacity: 1;
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
 .home-btn:hover .home-h {
@@ -68,7 +68,7 @@ a {
   transition-delay: 0.1s;
 }
 
-.home-btn:hover .home-o{
+.home-btn:hover .home-o {
   opacity: 1;
   transform: translateY(-5px);
   transition-delay: 0.2s;
@@ -90,12 +90,12 @@ a {
 
 .library-btn span {
   display: inline-block;
-  opacity: 1; 
-  transform: translateY(0px); 
+  opacity: 1;
+  transform: translateY(0px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.library-btn:hover{
+.library-btn:hover {
   background-color: var(--movie-genre-color) 0.5s ease;
   color: var(--light-theme-color);
   border: transparent;
@@ -104,7 +104,7 @@ a {
 
 .library-btn:hover span {
   opacity: 1;
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
 .library-btn:hover .my-btn {
@@ -113,7 +113,7 @@ a {
   transition-delay: 0.1s;
 }
 
-.library-btn:hover .lbr-btn{
+.library-btn:hover .lbr-btn {
   opacity: 1;
   transform: translateY(5px);
   transition-delay: 0.2s;
@@ -128,7 +128,38 @@ a {
   font-weight: var(--default-weight);
   font-size: var(--button-size);
   transition: background-color 0.5s ease-in-out;
+}
 
+.watch-and-queue {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  right: 5%;
+  top: 20px;
+}
+
+.watched-btn,
+.queue-btn {
+  border: transparent;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: var(--light-theme-color);
+  color: var(--text-color-light);
+  font-weight: var(--default-weight);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.watched-btn:hover,
+.queue-btn:hover {
+  cursor: pointer;
+  background-color: var(--movie-genre-color) 0.5s ease;
+  border: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.active {
+  background-color: var(--movie-genre-color);
+  color: var(--light-theme-color);
 }
 
 .logo-title {
@@ -146,7 +177,6 @@ a {
 
   animation: rotate-animation 10s linear infinite;
   transform-origin: center;
-
 }
 
 @keyframes rotate-animation {
@@ -162,8 +192,6 @@ a {
 .second-logo {
   display: none;
 }
-
-
 
 .title {
   color: var(--light-theme-color);
@@ -206,7 +234,7 @@ a {
   cursor: pointer;
 }
 
-.dark-btn{
+.dark-btn {
   cursor: pointer;
   position: absolute;
   right: 5%;
@@ -220,20 +248,19 @@ a {
   transition: background-color 0.3s ease-in-out;
 }
 
-.fa-moon{
+.fa-moon {
   /* color: var(--light-theme-color); */
   opacity: 0;
   transform: translateY(10px); /* Luna este inițial ascunsă */
 }
 
 .dark-btn i {
-  font-size: 20px; 
+  font-size: 20px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 #sun {
-  color: #f3cf00; 
+  color: #f3cf00;
   opacity: 1;
   transform: translateY(10px);
 }
-

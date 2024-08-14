@@ -1,24 +1,31 @@
-<div class="content-container is-hidden">
-  <div class="modal-info">
-    <button type="button" class="close-btn js-close-modal">x</button>
-    <div class="modal-info-content">
-      <div class="info">
-        <div class="info-buttons">
-          <a href="#" class="library-links">
-            <button class="modal-button watched js-watched is-hidden">
-              ADD TO WATCHED
-            </button>
-          </a>
-          <a href="#" class="library-links">
-            <button class="modal-button queue js-queue is-hidden">
-              ADD TO QUEUE
-            </button>
-          </a>
+<div id="modal" class="modal-overlay is-hidden">
+  <div class="modal-content">
+    <button type="button" class="close-btn js-close-modal" id="close-modal-btn">
+      x
+    </button>
+    <div class="modal-body">
+      <div class="modal-left">
+        <img
+          id="movie-poster"
+          class="movie-poster"
+          src="./images/no-img.jpg"
+          alt="Movie Poster"
+        />
+      </div>
+      <div class="modal-right">
+        <h2 id="movie-title" class="movie-title"></h2>
+        <p id="movie-original-title" class="movie-original-title"></p>
+        <p id="movie-genres" class="movie-genres"></p>
+        <p id="movie-release-date" class="movie-release-date"></p>
+        <p id="movie-vote-average" class="movie-vote-average"></p>
+        <div id="trailer-container" class="trailer-container"></div>
+        <div class="modal-buttons">
+          <button class="modal-button" id="watched">ADD TO WATCHED</button>
+          <button class="modal-button" id="queue">ADD TO QUEUE</button>
         </div>
-        <button class="modal-button trailer js-trailer is-hidden">
-          TRAILER
-        </button>
-        <div class="not_found is-hidden">Movie trailer not found!</div>
+        <div class="not_found is-hidden" id="trailer-not-found">
+          Movie trailer not found!
+        </div>
       </div>
     </div>
   </div>
