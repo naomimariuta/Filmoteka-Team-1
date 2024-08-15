@@ -59,3 +59,15 @@
   font-size: 12px;
   line-height: calc(14 / 12);
 }
+
+@media (min-width: 768px) and (max-width: 1279px){
+  .card-list-item{
+    min-width: 319px;
+  }
+}
+
+@media (min-width: 320px) and (max-width:767px){
+ .card-list-main{
+  margin-top: 150px;
+ }
+}

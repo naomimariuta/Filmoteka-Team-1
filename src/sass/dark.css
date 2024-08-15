@@ -1,4 +1,5 @@
 .dark-mode .dark-btn {
+
   background-image: url(/src/images/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,6 +22,30 @@
   transition: background-color 1s ease;
   transition: color 1s ease;
 }
+
+    background-image: url(/src/images/starry-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .dark-mode #sun {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  
+  .dark-mode #moon {
+    opacity: 1;
+    transform: translateY(-10px); 
+    color: var(--light-theme-color);
+  }
+  
+.dark-mode{
+background-color: #1f1f1f;
+background-image: url(/src/images/dark-mode-button.jpg);
+transition: background-color 1s ease;
+transition: color 1s ease;
+}  
+
 
 .card-list-title.dark-mode {
   color: var(--light-theme-color);

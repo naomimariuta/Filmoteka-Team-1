@@ -5,4 +5,5 @@ import './js/library';
 import './js/search';
 import './js/logo';
 import './js/dark-mode';
-import './js/footer';
+import './js/footer'
+import './js/scroll-button'
