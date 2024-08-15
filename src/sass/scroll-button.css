@@ -16,3 +16,9 @@
   font-size: 20px;
   padding: 20px;
 }
+
+@media (min-width: 320px) and (max-width: 768px){
+  .scrollbutton {
+    display: none; 
+  }
+}

@@ -2,10 +2,6 @@ a {
   text-decoration: none;
 }
 
-.watch-and-queue {
-  display: none;
-}
-
 .hero-section {
   background-image: url('/src/images/background-header-desktop.png');
   background-repeat: no-repeat;
@@ -130,23 +126,19 @@ a {
   transition: background-color 0.5s ease-in-out;
 }
 
-.watch-and-queue {
-  display: flex;
-  gap: 25px;
-  position: absolute;
-  right: 5%;
-  top: 20px;
-}
+
 
 .watched-btn,
 .queue-btn {
-  border: transparent;
-  border-radius: 20px;
-  padding: 5px 25px;
-  background-color: var(--light-theme-color);
   color: var(--text-color-light);
-  font-weight: var(--default-weight);
-  transition: background-color 0.3s ease-in-out;
+  border-radius: 100px;
+  border: transparent;
+  padding: 14px 24px;
+  background-color: var(--light-theme-color);
+  font-weight: 700;
+  font-size: var(--button-size);
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .watched-btn:hover,
@@ -263,4 +255,107 @@ a {
   color: #f3cf00;
   opacity: 1;
   transform: translateY(10px);
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .hero-section{
+  background-image: url('/src/images/phone-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: auto;
+  height: 460px;
+  background-color: rgba(197, 5, 5, 0.8);
+  overflow: hidden;
+  border-radius: 15px;
+  position: absolute;
+  }
+
+  .search-form{
+    width: 300px;
+    border: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  right: 15px;
+  
+  }
+
+  .home-library{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 15px;
+  }
+
+  .title {
+    color: var(--light-theme-color);
+    font-weight: var(--default-weight);
+    font-size: 55px;
+  }
+
+.logo-title{
+  position: absolute;
+  bottom: 20%;
+}
+
+.film-logo{
+  width: 40px;
+
+}
+
+.dark-btn{
+ position: absolute;
+ right: 50%;
+ bottom: 5%;
+ transform: translateX(50%);
+}
+
+.watch-and-queue{
+display: flex;
+justify-content: flex-start;
+margin-top: 50px;
+gap: 15px;
+}
+
+.watched-btn{
+  color: var(--text-color-light);
+  border-radius: 100px;
+  border: transparent;
+  padding: 14px 24px;
+  background-color: var(--light-theme-color);
+  font-weight: bold;
+  font-size: var(--button-size);
+  margin-left: -5px;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.queue-btn{
+  color: var(--text-color-light);
+  border-radius: 100px;
+  border: transparent;
+  padding: 14px 24px;
+  background-color: var(--light-theme-color);
+  font-weight: bold;
+  font-size: var(--button-size);
+  margin-left: -5px;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+  .nav-list{
+    display: block;
+  }
+}
+
+@media (min-width: 1280px){
+  .watch-and-queue {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 25px;
+    position: relative;
+    top: 90%;
+    left: -100%;
+    transform: translateX(-95%);
+  }
 }

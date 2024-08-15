@@ -59,3 +59,9 @@
   font-size: 12px;
   line-height: calc(14 / 12);
 }
+
+@media (min-width: 320px) and (max-width:767px){
+ .card-list-main{
+  margin-top: 150px;
+ }
+}
