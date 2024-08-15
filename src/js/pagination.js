@@ -1,11 +1,11 @@
-import { getPopularFilms, onError} from "./movieApi";
-import { createGallery } from "./libraryManager";
+import { getPopularFilms, onError } from './movieApi';
+import { createGallery } from './libraryManager';
 
 document.addEventListener('DOMContentLoaded', function () {
   const contentDiv = document.getElementById('content');
   const paginationDiv = document.getElementById('pagination');
 
-  const itemsPerPage = 20;  // Numărul de elemente per pagină
+  const itemsPerPage = 20; // Numărul de elemente per pagină
   let currentPage = 1;
   let totalPages = 1;
 
@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const data = await getPopularFilms(page);
       totalPages = Math.ceil(data.total_results / itemsPerPage);
 
-      console.log("Total pages:", totalPages); 
+      // console.log("Total pages:", totalPages);
 
       if (data.results.length > 0) {
         createGallery(data.results);
       } else {
         contentDiv.innerHTML = '<p>No movies available.</p>';
       }
-      
+
       generatePagination(); // Generează butoanele de paginare după actualizarea `totalPages`
     } catch (error) {
       onError(error);
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function generatePagination() {
-    paginationDiv.innerHTML = ''; 
+    paginationDiv.innerHTML = '';
 
     // Buton pentru prima pagină
     const firstArrow = document.createElement('span');
@@ -113,12 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
       lastArrow.classList.add('disabled');
     }
     paginationDiv.appendChild(lastArrow);
-    console.log(paginationDiv.innerHTML)
+    // console.log(paginationDiv.innerHTML);
   }
 
   function updatePagination() {
     generateContent(currentPage);
   }
 
-  updatePagination(); 
+  updatePagination();
 });

@@ -54,9 +54,9 @@ export async function getMovieTrailer(id) {
 }
 
 export function onError(error) {
+  console.error('An error occurred:', error);
   Notify.failure(
     'Oops! Something went wrong! Try reloading the page or make another choice!',
     parameters
   );
-  console.log(error);
 }

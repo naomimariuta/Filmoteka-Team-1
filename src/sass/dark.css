@@ -1,38 +1,44 @@
 .dark-mode .dark-btn {
-    background-image: url(/src/images/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  
-  .dark-mode #sun {
-    opacity: 0;
-    transform: translateY(-20px); 
-  }
-  
-  .dark-mode #moon {
-    opacity: 1;
-    transform: translateY(-10px); 
-    color: var(--light-theme-color);
-  }
-  
-.dark-mode{
-background-color: #1f1f1f;
-background-image: url(/src/images/stars-4k-ultra-hd-dark-phone-sv17rfy2thpwos20.jpg);
-transition: background-color 1s ease;
-transition: color 1s ease;
-}  
-
-.card-list-title.dark-mode {
-    color: var(--light-theme-color);
+  background-image: url(/src/images/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card-list-title, 
-body, 
+.dark-mode #sun {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.dark-mode #moon {
+  opacity: 1;
+  transform: translateY(-10px);
+  color: var(--light-theme-color);
+}
+
+.dark-mode {
+  background-color: #1f1f1f;
+  background-image: url(/src/images/stars-4k-ultra-hd-dark-phone-sv17rfy2thpwos20.jpg);
+  transition: background-color 1s ease;
+  transition: color 1s ease;
+}
+
+.card-list-title.dark-mode {
+  color: var(--light-theme-color);
+}
+
+.library-btn.dark-mode,
+.home-btn.dark-mode,
+.watched-btn.dark-mode,
+.queue-btn.dark-mode {
+  color: var(--light-theme-color);
+}
+
+.card-list-title,
+body,
 .dark-btn {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.footer-container.dark-mode{
-    color: var(--light-theme-color);
+.footer-container.dark-mode {
+  color: var(--light-theme-color);
 }

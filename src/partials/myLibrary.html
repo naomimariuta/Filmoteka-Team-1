@@ -1,28 +1,10 @@
 <header class="hero-section">
   <div class="header-container">
     <nav class="nav-list">
-      <form class="search-form">
-        <input
-          id="searchInput"
-          type="text"
-          class="search-form-input"
-          name="searchQuery"
-          placeholder="Movie Search"
-          aria-label="movie search"
-          autocomplete="off"
-        />
-        <button type="submit" class="submit-btn">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </form>
       <div class="">
         <ul class="home-library">
           <li>
-            <a
-              href="./index.html"
-              class="home-btn active_link"
-              data-action="home"
-            >
+            <a href="./index.html" class="home-btn" data-action="home">
               <b><span class="home-h">H</span></b>
               <b><span class="home-o">O</span></b>
               <b><span class="home-m">M</span></b>
@@ -30,10 +12,24 @@
             </a>
           </li>
           <li>
-            <a href="myLibrary.html" class="library-btn" data-action="library">
+            <a
+              href="myLibrary.html"
+              class="library-btn active_link"
+              data-action="library"
+            >
               <span class="my-btn"><b>MY</b> </span>
               <span class="lbr-btn"><b>LIBRARY</b></span></a
             >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="watch-and-queue">
+          <li>
+            <a class="watched-btn not-active"> Watched </a>
+          </li>
+          <li>
+            <a class="queue-btn not-active"> Queue </a>
           </li>
         </ul>
       </div>

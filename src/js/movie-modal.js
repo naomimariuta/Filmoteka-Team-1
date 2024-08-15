@@ -93,20 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let storedMovie = getFromStorage(movieId);
     console.log('Stored Movie Before:', storedMovie);
     if (storedMovie && storedMovie[`is${capitalize(type)}`]) {
-      // Dacă filmul este deja în lista curentă, îl eliminăm
       storedMovie[`is${capitalize(type)}`] = false;
       console.log('Removing from', type);
       button.textContent = addText;
       button.classList.remove('active');
 
-      if (!storedMovie.isInQueue && !storedMovie.isWatched) {
+      if (!storedMovie.isQueue && !storedMovie.isWatched) {
         removeFromStorage(movieId);
       } else {
-        addToStorage(movieId, storedMovie); // Actualizăm starea în local storage
+        addToStorage(movieId, storedMovie);
       }
     } else {
       console.log('Adding to', type);
-      // Dacă filmul nu este în lista curentă, îl adăugăm
       if (!storedMovie) {
         storedMovie = { id: movieId };
       }
@@ -148,8 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  modalOverlay.addEventListener('click', e => {
-    if (e.target === modalOverlay) {
+  document.body.addEventListener('click', e => {
+    if (
+      e.target.classList.contains('js-close-modal') ||
+      e.target === modalOverlay
+    ) {
       closeModal();
     }
   });

@@ -130,12 +130,28 @@ a {
   transition: background-color 0.5s ease-in-out;
 }
 
+.active {
+  background-color: var(--movie-genre-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.not-active {
+  background-color: var(--light-theme-color);
+  color: var(--text-color-light);
+}
+
 .watch-and-queue {
-  display: flex;
   gap: 25px;
   position: absolute;
   right: 5%;
   top: 20px;
+  display: flex;
 }
 
 .watched-btn,
@@ -143,8 +159,7 @@ a {
   border: transparent;
   border-radius: 20px;
   padding: 5px 25px;
-  background-color: var(--light-theme-color);
-  color: var(--text-color-light);
+
   font-weight: var(--default-weight);
   transition: background-color 0.3s ease-in-out;
 }
@@ -155,11 +170,6 @@ a {
   background-color: var(--movie-genre-color) 0.5s ease;
   border: transparent;
   transition: background-color 0.5s ease-in-out;
-}
-
-.active {
-  background-color: var(--movie-genre-color);
-  color: var(--light-theme-color);
 }
 
 .logo-title {
