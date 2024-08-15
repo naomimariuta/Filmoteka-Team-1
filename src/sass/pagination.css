@@ -66,13 +66,19 @@
 
 /* Responsive design for tablets */
 @media (max-width: 1280px) {
-  .content {
-    max-width: 90%;
+ 
+  .page-button{
+   margin-top: 30px;
   }
+
+ .arrow{
+  margin-top: 30px;
+ }
+
 }
 
 /* Responsive design for mobile devices */
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 767px) {
   .content {
     padding: 15px;
     max-width: 15px;
