@@ -126,7 +126,6 @@ a {
   transition: background-color 0.5s ease-in-out;
 }
 
-
 .active {
   background-color: var(--movie-genre-color);
   color: white;
@@ -151,7 +150,6 @@ a {
   display: flex;
 }
 
-
 .watched-btn,
 .queue-btn {
   color: var(--text-color-light);
@@ -170,7 +168,6 @@ a {
   font-size: var(--button-size);
   overflow: hidden;
   transition: background-color 0.5s ease-in-out;
-
 }
 
 .watched-btn:hover,
@@ -284,7 +281,23 @@ a {
   transform: translateY(10px);
 }
 
-@media (min-width: 1280px){
+.active {
+  background-color: var(--movie-genre-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.not-active {
+  background-color: var(--light-theme-color);
+  color: var(--text-color-light);
+}
+
+@media (min-width: 1280px) {
   .watch-and-queue {
     display: flex;
     gap: 15px;
@@ -299,38 +312,35 @@ a {
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .watch-and-queue {
-   display: inline-flex;
-   margin-top: 25px;
-   gap: 10px;
+    display: inline-flex;
+    margin-top: 25px;
+    gap: 10px;
   }
-
-
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-  .hero-section{
-  background-image: url('/src/images/phone-background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: auto;
-  height: 460px;
-  background-color: rgba(197, 5, 5, 0.8);
-  overflow: hidden;
-  border-radius: 15px;
-  position: absolute;
+@media (min-width: 320px) and (max-width: 767px) {
+  .hero-section {
+    background-image: url('/src/images/phone-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: auto;
+    height: 460px;
+    background-color: rgba(197, 5, 5, 0.8);
+    overflow: hidden;
+    border-radius: 15px;
+    position: absolute;
   }
 
-  .search-form{
+  .search-form {
     width: 300px;
     border: 1px solid white;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  right: 15px;
-  
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 15px;
   }
 
-  .home-library{
+  .home-library {
     display: flex;
     justify-content: flex-start;
     margin-right: 15px;
@@ -342,58 +352,53 @@ a {
     font-size: 55px;
   }
 
-.logo-title{
-  position: absolute;
-  bottom: 20%;
-}
+  .logo-title {
+    position: absolute;
+    bottom: 20%;
+  }
 
-.film-logo{
-  width: 40px;
+  .film-logo {
+    width: 40px;
+  }
 
-}
+  .dark-btn {
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    transform: translateX(50%);
+  }
 
-.dark-btn{
- position: absolute;
- right: 50%;
- bottom: 5%;
- transform: translateX(50%);
-}
+  .watch-and-queue {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    gap: 15px;
+  }
 
-.watch-and-queue{
-display: flex;
-justify-content: flex-start;
-margin-top: 50px;
-gap: 15px;
-}
+  .watched-btn {
+    border-radius: 100px;
+    border: transparent;
+    padding: 14px 24px;
 
-.watched-btn{
-  color: var(--text-color-light);
-  border-radius: 100px;
-  border: transparent;
-  padding: 14px 24px;
-  background-color: var(--light-theme-color);
-  font-weight: bold;
-  font-size: var(--button-size);
-  margin-left: -5px;
-  overflow: hidden;
-  transition: background-color 0.5s ease-in-out;
-}
+    font-weight: bold;
+    font-size: var(--button-size);
+    margin-left: -5px;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+  }
 
-.queue-btn{
-  color: var(--text-color-light);
-  border-radius: 100px;
-  border: transparent;
-  padding: 14px 24px;
-  background-color: var(--light-theme-color);
-  font-weight: bold;
-  font-size: var(--button-size);
-  margin-left: -5px;
-  overflow: hidden;
-  transition: background-color 0.5s ease-in-out;
-}
+  .queue-btn {
+    border-radius: 100px;
+    border: transparent;
+    padding: 14px 24px;
+    font-weight: bold;
+    font-size: var(--button-size);
+    margin-left: -5px;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+  }
 
-  .nav-list{
+  .nav-list {
     display: block;
   }
 }
-
