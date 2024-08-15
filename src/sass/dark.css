@@ -1,5 +1,5 @@
 .dark-mode .dark-btn {
-    background-image: url(/src/images/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg);
+    background-image: url(/src/images/starry-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -18,7 +18,7 @@
   
 .dark-mode{
 background-color: #1f1f1f;
-background-image: url(/src/images/stars-4k-ultra-hd-dark-phone-sv17rfy2thpwos20.jpg);
+background-image: url(/src/images/dark-mode-button.jpg);
 transition: background-color 1s ease;
 transition: color 1s ease;
 }  
